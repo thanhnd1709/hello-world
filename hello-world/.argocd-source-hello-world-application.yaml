@@ -1,0 +1,8 @@
+helm:
+  parameters:
+  - name: image.name
+    value: docker.io/ndthanht36/message-server
+    forcestring: true
+  - name: image.tag
+    value: "3.0"
+    forcestring: true
