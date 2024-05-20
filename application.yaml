@@ -19,6 +19,7 @@ spec:
     helm:
       valueFiles:
       - values.yaml 
+      - .argocd-source-hello-world-application.yaml  
   destination: 
     server: https://kubernetes.default.svc
     namespace: hello-world

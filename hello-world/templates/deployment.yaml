@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
         - name: {{ .Chart.Name }}
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          image: "{{ .Values.image.repository }}:{{ ( index .Values.helm.parameters 1 ).value | replace "\"" "" }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - name: http
