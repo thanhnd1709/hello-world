@@ -1,0 +1,8 @@
+replicaCount: 2
+image:
+  repository: "docker.io/ndthanht36/message-server"
+  tag: "1.0"
+  pullPolicy: IfNotPresent
+service:
+  type: NodePort
+  port: 8888
