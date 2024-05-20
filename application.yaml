@@ -5,7 +5,7 @@ metadata:
   namespace: argocd
   annotations:
     argocd-image-updater.argoproj.io/git-branch: main
-    argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/git-creds
+    argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/github-creds
     argocd-image-updater.argoproj.io/image-list: message-server=docker.io/ndthanht36/message-server
     argocd-image-updater.argoproj.io/message-server.update-strategy: latest
     argocd-image-updater.argoproj.io/message-server.force-update: "true"
@@ -13,7 +13,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://gitlab.com/a.nguyenvan/hello-world.git
+    repoURL: https://github.com/thanhnd1709/hello-world
     targetRevision: HEAD
     path: hello-world
     helm:
